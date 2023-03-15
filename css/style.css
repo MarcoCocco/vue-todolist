@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 500px;
+    height: 850px;
+    border: 3px solid rgb(100, 99, 99);
+    border-radius: 50px;
+    background-image: url(../img/todo.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#inputList {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#inputList input {
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 2px 3px 3px #00000084;
+}
+
+#btnList {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: brown;
+    color: white;
+    box-shadow: 2px 3px 3px #00000084;
+}
+
+#btnList:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+ul {
+    position: absolute;
+    top: 135px;
+    left: 60px;
+}
+
+ul li {
+    list-style-type: none;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: rgb(80, 78, 78);
+}
+
+.fa-solid:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
