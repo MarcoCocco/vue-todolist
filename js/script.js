@@ -48,10 +48,22 @@ createApp({
 
         addToDo() {
 
-            this.toDoList.push(this.newToDo);
-            this.newToDo = '';
+            //Aggiungo un if per creare un nuovo oggetto all'interno dell'array
+            if (this.newToDo !== '') {
 
-        },
+              const newToDoObj = {
+
+                text: this.newToDo,
+                done: false
+
+              };
+
+              this.toDoList.push(newToDoObj);
+              this.newToDo = '';
+
+            }
+
+          },
 
 
     },

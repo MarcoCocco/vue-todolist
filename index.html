@@ -24,7 +24,7 @@
 
             <ul>
                 <li v-for="(todo, index) in toDoList">
-                    {{todo}}
+                    {{todo.text}}
                     <i @click="eraseToDo(index)" class="fa-solid fa-eraser"></i>
                 </li>
 
