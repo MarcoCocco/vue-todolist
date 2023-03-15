@@ -23,7 +23,7 @@
         <div class="container">
 
             <ul>
-                <li :class="toDoList[index].done == true ? 'lineThrough' : ''"  v-for="(todo, index) in toDoList">
+                <li v-for="(todo, index) in toDoList" @click="doneToggle(index)" :class="toDoList[index].done == true ? 'lineThrough' : ''">
                     {{todo.text}}
                     <i @click="eraseToDo(index)" class="fa-solid fa-eraser"></i>
                 </li>

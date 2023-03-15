@@ -64,7 +64,21 @@ createApp({
       }
 
     },
-      
+
+    doneToggle(index) {
+
+      if (this.toDoList[index].done === true) {
+
+        this.toDoList[index].done = false;
+
+      } else {
+
+        this.toDoList[index].done = true;
+
+      }
+
+    },
+
   },
 
 }).mount('#app')
