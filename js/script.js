@@ -24,16 +24,36 @@ Bonus:
 
 const { createApp } = Vue
 
-  createApp({
+createApp({
 
     data() {
 
-      return {
+        return {
 
-        message: 'Hello Vue!'
+            toDoList: [],
 
-      }
+            newToDo: '',
 
-    }
+        }
 
-  }).mount('#app')
+    },
+
+    methods: {
+
+        eraseToDo(index) {
+
+            this.toDoList.splice(index, 1);
+
+        },
+
+        addToDo() {
+
+            this.toDoList.push(this.newToDo);
+            this.newToDo = '';
+
+        },
+
+
+    },
+
+}).mount('#app')
