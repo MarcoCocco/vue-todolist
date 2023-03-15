@@ -23,7 +23,7 @@
         <div class="container">
 
             <ul>
-                <li v-for="(todo, index) in toDoList">
+                <li :class="toDoList[index].done == true ? 'lineThrough' : ''"  v-for="(todo, index) in toDoList">
                     {{todo.text}}
                     <i @click="eraseToDo(index)" class="fa-solid fa-eraser"></i>
                 </li>
@@ -31,7 +31,7 @@
             </ul>
 
             <div id="inputList">
-                <input type="text" v-model="newToDo" @keyup.enter="addToDo()">
+                <input type="text" maxlength="35"  v-model="newToDo" @keyup.enter="addToDo()">
                 <button id="btnList" @click="addToDo()">Add</button>
             </div>
 

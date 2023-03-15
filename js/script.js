@@ -26,46 +26,45 @@ const { createApp } = Vue
 
 createApp({
 
-    data() {
+  data() {
 
-        return {
+    return {
 
-            toDoList: [],
+      toDoList: [],
 
-            newToDo: '',
+      newToDo: '',
 
-        }
+    }
 
-    },
+  },
 
-    methods: {
+  methods: {
 
-        eraseToDo(index) {
+    eraseToDo(index) {
 
-            this.toDoList.splice(index, 1);
-
-        },
-
-        addToDo() {
-
-            //Aggiungo un if per creare un nuovo oggetto all'interno dell'array
-            if (this.newToDo !== '') {
-
-              const newToDoObj = {
-
-                text: this.newToDo,
-                done: false
-
-              };
-
-              this.toDoList.push(newToDoObj);
-              this.newToDo = '';
-
-            }
-
-          },
-
+      this.toDoList.splice(index, 1);
 
     },
+
+    addToDo() {
+
+      //Aggiungo un if per creare un nuovo oggetto all'interno dell'array
+      if (this.newToDo !== '') {
+
+        const newToDoObj = {
+
+          text: this.newToDo,
+          done: false,
+
+        };
+
+        this.toDoList.push(newToDoObj);
+        this.newToDo = '';
+
+      }
+
+    },
+      
+  },
 
 }).mount('#app')
